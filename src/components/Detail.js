@@ -21,12 +21,18 @@ function Detail() {
 
                 </TrailerButton>
                 <AddButton>
-
+                    <span>+</span>
                 </AddButton>
                 <GroupWatchButton>
-
+                    <img src="/images/group-icon.png"></img>
                 </GroupWatchButton>
             </Controls>
+            <SubTitle>
+                2018 - 7m - Family, Fantasy, Kids, Animation
+            </SubTitle>
+            <Description>
+                Nao conheco o filme mas parece fixe para os miudos
+            </Description>
         </Container>
     )
 }
@@ -73,6 +79,7 @@ const ImageTitle = styled.div`
 
 const Controls = styled.div`
     display:flex;
+    align-items: center;
 
 `
 
@@ -87,17 +94,53 @@ const PlayButton = styled.button`
     padding: 0 24px;
     margin-right: 22px;
     letter-spacing: 1.8px;
+    cursor: pointer;
+
+    &:hover{
+        background: rgb(198, 198, 198);
+    }
 `
 
-const TrailerButton = styled.button`
-    display: flex;
-    align-items: center;
+const TrailerButton = styled(PlayButton)`
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgb(249,249,249);
+    color: rgb(249,249,249);
+    text-transform: uppercase;
 `
 
 const AddButton = styled.button`
+    margin-right: 16px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    
+    span{
+        font-size: 30px;
+        color: white;
+    }
+`
+
+const GroupWatchButton = styled(AddButton)`
+    background-color: rgb(0,0,0);
 
 `
 
-const GroupWatchButton = styled.button`
+const SubTitle = styled.div`
+    color: rgb(249,249,249);
+    font-size: 15px;
+    min-height: 20px;
+    margin-top: 26px;
+`
 
+const Description = styled.div`
+    line-height: 1.4;
+    font-size: 20px;
+    margin-top: 16px;
+    color: rgb(249,249,249);
 `
