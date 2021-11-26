@@ -9,6 +9,11 @@ function Login() {
                 <SignUp>
                     GET ALL THERE
                 </SignUp>
+                <Description>
+                    Get Premier Access do Raya and the last Dragon
+                </Description>
+                <CTALogoTwo src="/images/cta-logo-two.png"/>
+
                 
             </CTA>
         </Container>
@@ -21,8 +26,9 @@ const Container = styled.div`
     position: relative;
     height: calc(100vh - 70px);
     display:flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
+    
 
     &:before{
         background-image: url(/images/login-background.jpg); 
@@ -35,6 +41,7 @@ const Container = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
+        opacity:0.7;
         
         z-index: -1;
     }
@@ -46,6 +53,8 @@ const CTA = styled.div`
     width: 70%;
     display: flex;
     flex-direction: column;
+    margin-top:100px;
+    align-items:center;
     
     
 `
@@ -73,4 +82,15 @@ const SignUp = styled.a`
         background-color: #0483ee;
     }
     
+`
+
+const Description = styled.p`
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.5;
+`
+
+const CTALogoTwo = styled.img`
+    width:90%;
 `
